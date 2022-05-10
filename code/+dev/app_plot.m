@@ -1,0 +1,19 @@
+function app_plot(app)
+dev.set_axes_preferences(app);
+
+plot(app.S1Axes, app.Signals.Points, app.MembershipFunction.S1, ...
+    Color = 'b', LineWidth = 1);
+plot(app.S2Axes, app.Signals.Points, app.MembershipFunction.S2, ...
+    Color = 'b', LineWidth = 1);
+plot(app.S3Axes, app.Signals.Points, app.MembershipFunction.S3, ...
+    Color = 'b', LineWidth = 1);
+plot(app.S4Axes, app.Signals.Points, app.MembershipFunction.S4, ...
+    Color = 'b', LineWidth = 1);
+plot(app.S5Axes, app.Signals.Points, app.MembershipFunction.S5, ...
+    Color = 'b', LineWidth = 1);
+plot(app.S6Axes, app.Signals.Points, app.MembershipFunction.S6, ...
+    Color = 'b', LineWidth = 1);
+
+dev.enable_graphics(app);
+
+end
