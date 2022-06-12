@@ -1,52 +1,35 @@
-function check_x_labels(app, AxesID, SignalNumber)
+function check_x_labels(app, AxesID)
 TextObjs = findobj(AxesID.Children, Type = 'Text');
-% TM = app.TrustMatrix(1:str2double(app.Signals.Quantity),1:str2double(app.Signals.Quantity));
-% FullTrustIdx = find(TM(SignalNumber,:) == 1);
-% if length(FullTrustIdx) > 1
-    xLabels = flip(findobj(TextObjs, ...
-        {'String', 'x_1'}, '-or', ...
-        {'String', 'x_2'}, '-or', ...
-        {'String', 'x_3'}, '-or', ...
-        {'String', 'x_4'}, '-or', ...
-        {'String', 'x_5'}, '-or', ...
-        {'String', 'x_6'}));
-%     switch sum(FullTrustIdx)
-%         case {3,4}
-%             set(xLabels(3), Position = [xLabels(3).Position(1) 0.08]);
-%         case 5
-%             set(xLabels(2), Position = [xLabels(2).Position(1) 0.08]);
-%         case 6
-%             set(xLabels(3), Position = [xLabels(3).Position(1) 0.13]);
-%             set(xLabels(2), Position = [xLabels(2).Position(1) 0.08]);
-%     end
-% end
+xLabels = flip(findobj(TextObjs, ...
+    {'String', 'x_1'}, '-or', ...
+    {'String', 'x_2'}, '-or', ...
+    {'String', 'x_3'}, '-or', ...
+    {'String', 'x_4'}, '-or', ...
+    {'String', 'x_5'}, '-or', ...
+    {'String', 'x_6'}));
 
-% a = repmat(app.Signals.Array(1:str2double(app.Signals.Quantity)), ...
-%     str2double(app.Signals.Quantity),1) == app.Signals.Array(1:str2double(app.Signals.Quantity))';
-% % [r, c] = find(a(SignalNumber,:) == 1);
-% [r, c] = find(a == 1);
-% b = cell(1, str2double(app.Signals.Quantity));
-% for i = 1:str2double(app.Signals.Quantity)
-%     b{i} = find(a(i,:) == 1);
-% end
-% c = any(cellfun(@(x) length(x), b) > 1);
-% 
-% if c
-%     set(xLabels(b(2:end)), String = "");
-%     set(xLabels(b(1)), String = strjoin(['x_' strjoin(string(b), ',_')], ''));
-% end
-% 
-
-idx = find_multiple(app.Signals.Array(1:str2double(app.Signals.Quantity)));
-if length(idx) > 1
-    set(xLabels(idx(2:end)), String = "");
-    set(xLabels(idx(1)), String = strjoin(['x_' strjoin(string(idx), ',_')], ''));
+[idx, sameValues] = find_multiple(app.Signals.Array(1:str2double(app.Signals.Quantity)));
+Groups = cell(1,length(sameValues));
+G = cell(1,length(sameValues));
+GroupFirstIdx = zeros(1,length(sameValues));
+GroupOtherIdx = cell(1,length(sameValues));
+for i = 1:length(sameValues)
+    G{i} = find(app.Signals.Array(1:str2double(app.Signals.Quantity)) == sameValues(i));
+    GroupFirstIdx(i) = G{i}(1);
+    GroupOtherIdx{i} = G{i}(2:end);
+    Groups{i} = strjoin(['x_' strjoin(string(G{i}), ',_')], '');
 end
 
+if length(idx) > 1
+    for j = 1:length(sameValues)
+        set(xLabels(GroupOtherIdx{j}), String = "");
+        set(xLabels(GroupFirstIdx(j)), String = Groups{j});
+    end
+end
 end
 
 % https://www.mathworks.com/matlabcentral/answers/336500-finding-the-indices-of-duplicate-values-in-one-array#answer_319943
-function idx = find_multiple(A)
+function [idx, sameValues] = find_multiple(A)
 T = true(size(A));
 off = false;
 A = A(:);
@@ -59,4 +42,5 @@ for iA = 1:numel(A)
     end
 end
 idx = find(~T);
+sameValues = unique(A(~T)');
 end

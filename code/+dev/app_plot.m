@@ -8,14 +8,15 @@ create_graphical_objects(app, app.S4Axes, app.MembershipFunction.S4, 4);
 create_graphical_objects(app, app.S5Axes, app.MembershipFunction.S5, 5);
 create_graphical_objects(app, app.S6Axes, app.MembershipFunction.S6, 6);
 
-dev.check_x_labels(app, app.S1Axes, 1);
+dev.check_x_labels(app, app.S1Axes);
+dev.check_x_labels(app, app.S2Axes);
+dev.check_x_labels(app, app.S3Axes);
+dev.check_x_labels(app, app.S4Axes);
+dev.check_x_labels(app, app.S5Axes);
+dev.check_x_labels(app, app.S6Axes);
 end
 
 function create_graphical_objects(app, AxesID, MFS, SignalNumber)
-% TM = app.TrustMatrix.*~eye(size(app.TrustMatrix));
-% SA = app.Signals.Array;
-% SA(app.TrustMatrix(SignalNumber,:) == 1) = 0;
-
 cla(AxesID);
 
 hold(AxesID, "on");
