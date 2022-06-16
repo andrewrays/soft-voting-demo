@@ -1,4 +1,9 @@
 function enable_results(app)
+% ENABLE_RESULTS    Control the visibility of the text areas
+%   ENABLE_RESULTS(app) displays or hides the text areas of the Results panel 
+%   depending on the quantity of required signals which is stored in
+%   app.Signals.Quantity property field.
+
 switch app.Signals.Quantity
     case '2'
         app.M1TextArea.Visible = 'on';

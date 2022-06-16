@@ -1,4 +1,13 @@
 function enable_mf_components(app)
+% ENABLE_MF_COMPONENTS  Control the visibility of the membership function
+% elements
+%   ENABLE_MF_COMPONENTS(app) displays or hides edit fields and their labels
+%   depending on the membership function type which is stored in 
+%   app.MembershipFunction.Type property field.
+%
+%   For the information about required parameters for each membership
+%   function, see Membership function setting section in the guide. 
+
 switch app.MembershipFunction.Type
     case 'Gaussian'
         app.MFP1EditField.Visible = 'on';

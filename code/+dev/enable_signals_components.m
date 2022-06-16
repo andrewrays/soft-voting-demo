@@ -1,4 +1,9 @@
 function enable_signals_components(app)
+% ENABLE_SIGNAL_COMPONENTS Control the visibility of signals elements
+%   ENABLE_SIGNAL_COMPONENTS(app) displays or hides sliders and their labels
+%   depending on the quantity of required signals which is stored in 
+%   app.Signals.Quantity property field.
+
 switch app.Signals.Quantity
     case '2'
         app.S1Slider.Visible = 'on';

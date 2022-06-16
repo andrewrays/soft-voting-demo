@@ -1,4 +1,9 @@
 function set_initial_preferences(app)
+% SET_INITIAL_PREFERENCES   set preferences after changing membership
+% function type
+%   SET_INITIAL_PREFERENCES(app) sets required parameters in order to "reset
+%   the behaviour" of a membership function depending on its type which is
+%   stored in app.MembershipFunction.Type property field.
 
 switch app.MembershipFunction.Type
     case 'Gaussian'
