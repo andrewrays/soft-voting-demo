@@ -1,4 +1,9 @@
 function enable_axes(app)
+% ENABLE_AXES   Control the visibility of the axes
+%   ENABLE_AXES(app) displays or hides the axes depending on
+%   the quantity of required signals which is stored in app.Signals.Quantity 
+%   property field.
+
 switch app.Signals.Quantity
     case '2'
         app.S1Axes.Visible = 'on';
