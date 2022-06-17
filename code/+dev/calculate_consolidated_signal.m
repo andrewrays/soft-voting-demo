@@ -1,6 +1,6 @@
 function calculate_consolidated_signal(app)
 % CALCULATE_CONSOLIDATED_SIGNAL     Calculate consolidated signal
-%   CALCULATE_CONSOLIDATED_SIGNAL(app) Implements the second and the third
+%   CALCULATE_CONSOLIDATED_SIGNAL(app) implements the second and the third
 %   stages of the algorithm.
 
 % Reset to zero elements on the main diagonal of the trust indices matrix

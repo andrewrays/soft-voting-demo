@@ -1,5 +1,5 @@
 function set_signals_sliders_limits(app)
-% SET_SIGNALS_SLIDERS_LIMITS    set signals sliders limits
+% SET_SIGNALS_SLIDERS_LIMITS    Set signals sliders limits
 %   SET_SIGNALS_SLIDERS_LIMITS(app) sets sliders limits whicj are stored in
 %   app.Signals.LeftLimit and app.Signals.RightLimit property fields.
 

@@ -1,6 +1,6 @@
 function process_errors(app, error)
 % PROCESS_ERRORS    Create alert dialog box with defined errors
-%   PROCESS_ERRORS(app, ERROR) Creates an alert dialog box with message
+%   PROCESS_ERRORS(app, ERROR) creates an alert dialog box with message
 %   defined by ERROR.
 
 switch error

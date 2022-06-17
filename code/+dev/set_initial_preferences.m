@@ -1,5 +1,5 @@
 function set_initial_preferences(app)
-% SET_INITIAL_PREFERENCES   set preferences after changing membership
+% SET_INITIAL_PREFERENCES   Set preferences after changing membership
 % function type
 %   SET_INITIAL_PREFERENCES(app) sets required parameters in order to "reset
 %   the behaviour" of a membership function depending on its type which is

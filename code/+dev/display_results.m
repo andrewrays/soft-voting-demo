@@ -1,5 +1,5 @@
 function display_results(app)
-% DISPLAY_RESULTS   display trust indices matrix and consolidated signal
+% DISPLAY_RESULTS   Display trust indices matrix and consolidated signal
 %   DISPLAY_RESULTS(app) diplays elements of the trust indices matrix
 %   depending on the quantity of required signals and the consolidated signal
 %   in the Results panel.

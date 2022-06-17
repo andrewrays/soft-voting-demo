@@ -1,7 +1,7 @@
 function calculate_membership_functions(app)
 % CALCULATE_MEMBERSHIP_FUNCTIONS    Create array of membership functions
-%   CALCULATE_MEMBERSHIP_FUNCTIONS(app) Creates Y for the plotting
-% 
+%   CALCULATE_MEMBERSHIP_FUNCTIONS(app) creates Y values for the plotting
+%
 %   There also is a local auxiliary function create_mf().
 
 app.Signals.Points = linspace(app.Signals.LeftLimit, app.Signals.RightLimit, 10000);
@@ -97,7 +97,7 @@ function [MF1, MF2, MF3, MF4, MF5, MF6] = create_mf(Points, Parameters, Type)
 % CREATE_MF     Create 6 membership functions of defined type
 %   [MF1, MF2, MF3, MF4, MF5, MF6] = CREATE_MF(POINTS, PARAMETERS, TYPE)
 %   returns 6 membership functions of TYPE with PARAMETERS.
-% 
+%
 %   All inputs are setted in the calculate_membership_functions() function.
 
 switch Type

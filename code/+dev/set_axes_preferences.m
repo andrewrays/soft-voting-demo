@@ -1,5 +1,5 @@
 function set_axes_preferences(app)
-% SET_AXES_PREFERENCES  set required axes preferences in opening the
+% SET_AXES_PREFERENCES  Set required axes preferences in opening the
 % application
 %   SET_AXES_PREFERENCES(app) sets the following axes preferences:
 %       1. XLim
@@ -7,7 +7,7 @@ function set_axes_preferences(app)
 %       3. YTick
 %   
 %   XLim property is defined by LeftLimit and RightLimit variables.
-% 
+%
 %   YLim property is always equal to [0 1] as a degree of membership is
 %   within this range
 %

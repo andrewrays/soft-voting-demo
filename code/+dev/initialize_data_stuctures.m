@@ -1,7 +1,7 @@
 function initialize_data_stuctures(app)
 % INITIALIZE_DATA_STRUCTURES    Define properties fields at the opening of
 %   the application
-%   INITIALIZE_DATA_STRUCTURES(app) Defines the following properties:
+%   INITIALIZE_DATA_STRUCTURES(app) defines the following properties:
 %       1. Signals
 %       2. MembershipFunction
 %       3. TrustMatrix
@@ -23,14 +23,14 @@ function initialize_data_stuctures(app)
 %       10. S5.CurrentValue - current value of the 5th signal
 %       11. S6.CurrentValue - current value of the 6th signal
 %       12. S               - value of the consolidated signal
-% 
+%
 %   MembershipFunction property has the following fields:
 %       1. Type  - type of the membership functions
-%       2. P1    - the first parameter of the membership functions 
+%       2. P1    - the first parameter of the membership functions
 %       3. P2    - the second parameter of the membership functions
 %       4. P3    - the third parameter of the membership functions
 %       5. PCell - all parameters required for calculation of a membership
-%                  function according to its documentation page 
+%                  function according to its documentation page
 %       6. S1    - Y values of the 1st membership function required for
 %                  the plotting
 %       7. S2    - Y values of the 2nd membership function required for
@@ -43,9 +43,9 @@ function initialize_data_stuctures(app)
 %                  the plotting
 %       11. S6   - Y values of the 6th membership function required for
 %                  the plotting
-% 
+%
 %   TrustMatrix property stores a 6x6 matrix as a placeholder for future
-%   trust indices matrix.  
+%   trust indices matrix.
 
 app.Signals.Quantity        = '3';
 app.Signals.LeftLimit       = 0;

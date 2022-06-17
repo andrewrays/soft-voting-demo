@@ -1,10 +1,10 @@
 function calculate_trust_matrix(app)
 % CALCULATE_TRUST_MATRIX    Calculate trust matrix
-%   CALCULATE_TRUST_MATRIX(app) Calculates the trust matrix using array of
+%   CALCULATE_TRUST_MATRIX(app) calculates the trust matrix using array of
 %   signals' current values stored in app.Signals.Array property field and
 %   parameters of membership functions stored in P1 or/and P2 or/and P3
 %   fields of app.MembershipFunction property.
-% 
+%
 %   For proper behaviour of a membership function, every function has its
 %   own parameters array depending on its type. A function accepts the array
 %   as the second input. 

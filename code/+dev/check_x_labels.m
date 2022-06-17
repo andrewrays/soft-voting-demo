@@ -1,12 +1,12 @@
 function check_x_labels(app, AxesID)
-% CHECK_X_LABELS    Check if there are any identical values
+% CHECK_X_LABELS    Rename X labels if there are identical values
 %   CHECK_X_LABELS(app, AXESID) Implements an algorithm of searching and
 %   changing X labels of identical values of different signals. It works in
 %   an axes defined by AXESID to find its children.
-% 
+%
 %   Also, there is a local auxiliary function find_multiple() whitten by
 %   Jan.
-% 
+%
 %   See <https://www.mathworks.com/matlabcentral/answers/336500-finding-the-indices-of-duplicate-values-in-one-array#answer_319943>
 
 % Find all children of specific axes
@@ -30,7 +30,7 @@ G = cell(1,length(sameValues));
 GroupFirstIdx = zeros(1,length(sameValues));
 GroupOtherIdx = cell(1,length(sameValues));
 
-% Create a template with strings of indices of signals with identical values 
+% Create a template with strings of indices of signals with identical values
 for i = 1:length(sameValues)
     G{i} = find(app.Signals.Array(1:str2double(app.Signals.Quantity)) == sameValues(i));
     GroupFirstIdx(i) = G{i}(1);
@@ -50,7 +50,7 @@ end
 function [idx, sameValues] = find_multiple(A)
 % FIND_MULTIPLE     Detect identical elements in an array
 %   The algorithm was written by Jan
-% <https://www.mathworks.com/matlabcentral/answers/336500-finding-the-indices-of-duplicate-values-in-one-array#answer_319943> 
+% <https://www.mathworks.com/matlabcentral/answers/336500-finding-the-indices-of-duplicate-values-in-one-array#answer_319943>
 T = true(size(A));
 off = false;
 A = A(:);

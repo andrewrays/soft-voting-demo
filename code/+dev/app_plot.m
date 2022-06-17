@@ -1,8 +1,8 @@
 function app_plot(app)
 % APP_PLOT      Display all information in axis
-%   APP_PLOT(app) if the main function for plotting graphical information
+%   APP_PLOT(app) is the main function for plotting graphical information
 %   on axis.
-% 
+%
 %   It calls three auxiliary functions:
 %       1. set_axes_preferences(),
 %       2. create_graphical_objects(),
@@ -75,7 +75,7 @@ function place_trust_index_text(app, AxesID, SignalNumber, i, y)
 % PLACE_TRUST_INDEX_TEXT   Place trust index labels
 %   PLACE_TRUST_INDEX_TEXT(app, AXESID, SIGNALNUMBER, I, Y) places labels
 %   of trust indices with Y coordinate in AXESID axes.
-% 
+%
 %   SIGNALNUMBER and I indicate a column and a row of the trust indices matrix
 %   respectively.
 

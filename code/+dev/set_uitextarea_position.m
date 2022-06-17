@@ -1,5 +1,5 @@
 function set_uitextarea_position(app)
-% SET_UITEXTAREA_POSITION(app)  change position of text area
+% SET_UITEXTAREA_POSITION(app)  Change position of text area
 %   SET_UITEXTAREA_POSITION(app) changes position of text area where
 %   consolidated signal value is shown depending on the quantity of required
 %   signals which is stored in app.Signals.Quantity property field for
@@ -17,7 +17,7 @@ switch app.Signals.Quantity
         app.SLabel.Position    = [20 68 29 22];
     case '5'
         app.STextArea.Position = [60 40 57 23];
-        app.SLabel.Position    = [25 40 29 22]; 
+        app.SLabel.Position    = [25 40 29 22];
     case '6'
         app.STextArea.Position = [60 12 57 23];
         app.SLabel.Position    = [25 12 29 22];
